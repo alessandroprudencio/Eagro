@@ -1,0 +1,22 @@
+{
+  "name": "eagro-todo-list",
+  "version": "1.0.0",
+  "description": "teste eagro",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alessandroprudencio/eagro-todo-list.git"
+  },
+  "author": "alessandro prudencio",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alessandroprudencio/eagro-todo-list/issues"
+  },
+  "homepage": "https://github.com/alessandroprudencio/eagro-todo-list#readme",
+  "dependencies": {
+    "vue": "^2.6.11"
+  }
+}
