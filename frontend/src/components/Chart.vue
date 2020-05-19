@@ -12,6 +12,7 @@ export default {
   data() {
     return {
       dataset: [],
+      itensLenght: [],
       options: {
         chart: {
           theme: {
@@ -20,26 +21,48 @@ export default {
           id: "vuechart-example"
         },
         xaxis: {
-          categories: [1, 2, 3, 4, 5, 6, 7]
+          categories: this.itensLenght //meses
         }
       },
       series: [
         {
-          name: "Tarefas",
-          data: [1, 2, 3, 4, 7, 8, 9]
+          name: "Tarefa",
+          data: []
         }
       ]
     };
   },
   mounted() {
     let array = this.$store.state.taskList;
-    let arr = array.filter(task => task.done === true);
     let newArray = [];
-    arr.forEach((element, i) => {
-      newArray.push(i);
+
+    let arr = [];
+
+    array.forEach(element => {
+      if (element.tasks.length) newArray.push(element.tasks);
+      if (element.tasks.length > 0) arr.push(element.tasks[0]);
     });
 
-    this.series.data = newArray;
+    let totalArray = [];
+    for (let i = 0; i < arr.length; i++) {
+      this.itensLenght.push(i);
+      totalArray.push(arr[i]);
+    }
+
+    console.log(this.itensLenght);
+    console.log(totalArray);
+
+    let test = totalArray.filter(task => task.done == true);
+
+    let test2 = [];
+
+    for (let i = 0; i < test.length; i++) {
+      test2.push(i);
+    }
+
+    console.log(test2);
+
+    this.series.data = test2;
   }
 };
 </script>

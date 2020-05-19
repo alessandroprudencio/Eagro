@@ -44,9 +44,7 @@
       <div class="main-task">
         <div class="header">
           <h2>{{selectedCategory ? selectedCategory.name : '' }}</h2>
-          <p
-            v-if="selectedCategory.tasks"
-          >{{selectedCategory.tasks && selectedCategory.tasks.length === 0 ? '' : `${selectedCategory.tasks.filter(task => task.done === false).length} tarefas não concluidas`}}</p>
+          <p v-if="selectedCategory.tasks">{{selectedCategory.tasks.length}}</p>
         </div>
         <div
           class="list-tasks d-flex d-flex justify-content-between"
@@ -100,21 +98,21 @@
         </div>
       </div>
     </div>
-    <transition name="slide-fade">
+    <!-- <transition name="slide-fade">
       <div v-if="showChart" class="chart d-flex justify-content-center">
         <chart></chart>
       </div>
-    </transition>
+    </transition>-->
   </div>
 </template>
 
 <script>
 import "boxicons";
-import chart from "./Chart";
+// import chart from "./Chart";
 import { mapState, mapActions } from "vuex";
 export default {
   name: "TodoList",
-  components: { chart },
+  // components: { chart },
   data() {
     return {
       newItem: null,
