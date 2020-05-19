@@ -33,36 +33,7 @@ export default {
     };
   },
   mounted() {
-    let array = this.$store.state.taskList;
-    let newArray = [];
-
-    let arr = [];
-
-    array.forEach(element => {
-      if (element.tasks.length) newArray.push(element.tasks);
-      if (element.tasks.length > 0) arr.push(element.tasks[0]);
-    });
-
-    let totalArray = [];
-    for (let i = 0; i < arr.length; i++) {
-      this.itensLenght.push(i);
-      totalArray.push(arr[i]);
-    }
-
-    console.log(this.itensLenght);
-    console.log(totalArray);
-
-    let test = totalArray.filter(task => task.done == true);
-
-    let test2 = [];
-
-    for (let i = 0; i < test.length; i++) {
-      test2.push(i);
-    }
-
-    console.log(test2);
-
-    this.series.data = test2;
+  
   }
 };
 </script>
