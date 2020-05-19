@@ -37,6 +37,10 @@ Agora crie o seu banco de dados com o nome escolhido anteriormente
 agora o rode os comandos abaixo:
 
 ```
+bundle install
+```
+
+```
 rails db:migrate
 ```
 
