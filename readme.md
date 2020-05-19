@@ -41,6 +41,10 @@ rails db:migrate
 ```
 
 ```
+rails db:seed
+```
+
+```
 rails server
 ```
 
@@ -54,12 +58,10 @@ cd cd Eagro-Todo-List/frontend
 
 ```
 npm install
-
 ```
 
 ```
 npm run serve
-
 ```
 
 Pronto sua aplicação estará  rodando...
@@ -67,23 +69,23 @@ Pronto sua aplicação estará  rodando...
 
 # API endpoints
 
-## GET TODOS
-`http://localhost:3000/api/v1/todos` 
+## GET TASKS
+`http://localhost:3000/api/v1/tasks` 
 <br/>
 
 ## GET TODO BY ID
-`http://localhost:3000/api/v1/todos/:id` 
+`http://localhost:3000/api/v1/tasks/:id` 
 
 
 ## POST TODO
-`http://localhost:3000/api/v1/todos/
+`http://localhost:3000/api/v1/tasks/
 {
 	"title": "Buy food: milk, bread, fruits"
 }
 `
 
 ## PUT TODO
-`http://localhost:3000/api/v1/todos/:id
+`http://localhost:3000/api/v1/tasks/:id
 {
 	"title": "teste",
     "done": false
@@ -91,7 +93,7 @@ Pronto sua aplicação estará  rodando...
 `
 
 ## DELETE TODO
-`http://localhost:3000/api/v1/todos/:id`
+`http://localhost:3000/api/v1/tasks/:id`
 ___
 
 
