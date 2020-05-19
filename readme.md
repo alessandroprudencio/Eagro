@@ -70,30 +70,30 @@ Pronto sua aplicação estará  rodando...
 # API endpoints
 
 ## GET TASKS
-`http://localhost:3000/api/v1/tasks` 
+`http://localhost:3000/api/v1/task` 
 <br/>
 
-## GET TODO BY ID
-`http://localhost:3000/api/v1/tasks/:id` 
+## GET TASK BY ID
+`http://localhost:3000/api/v1/task/:id` 
 
 
-## POST TODO
-`http://localhost:3000/api/v1/tasks/
+## POST TASK
+`http://localhost:3000/api/v1/task/
 {
 	"title": "Buy food: milk, bread, fruits"
 }
 `
 
-## PUT TODO
-`http://localhost:3000/api/v1/tasks/:id
+## PUT TASK
+`http://localhost:3000/api/v1/task/:id
 {
 	"title": "teste",
     "done": false
 }
 `
 
-## DELETE TODO
-`http://localhost:3000/api/v1/tasks/:id`
+## DELETE TASK
+`http://localhost:3000/api/v1/task/:id`
 ___
 
 
@@ -102,6 +102,7 @@ ___
 * [Ruby on Rails](https://rubyonrails.org/)
 * [Node JS](https://nodejs.org/)
 * [npm](https://www.npmjs.com/)
+* [Vuejs](https://vuejs.org/)
 
 ## Contribuição
 
