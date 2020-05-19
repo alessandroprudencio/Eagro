@@ -6,7 +6,7 @@ export default {
         state.taskList = payload.data
     },
     newTask(state, payload) {
-        if (payload.created_at) state.selectedCategory.tasks.push(payload.data)
+        state.selectedCategory.tasks.push(payload)
     },
     removeTask(state, id) {
         if (id) state.selectedCategory.tasks.splice(state.selectedCategory.tasks.findIndex(i => i.id === id), 1);
@@ -23,6 +23,6 @@ export default {
     },
     doneTask(state, payload) {
         let i = state.selectedCategory.tasks.findIndex(i => i.id === payload.id)
-        state.selectedCategory.tasks[i].done = payload.done
+        state.selectedCategory.tasks[i].done = payload
     },
 }

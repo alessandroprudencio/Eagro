@@ -56,7 +56,10 @@
             class="custom-control custom-checkbox mb-2"
           >
             <input type="checkbox" class="custom-control-input" :id="task.id" :checked="task.done" />
-            <label class="custom-control-label" :for="task.id">{{task.title}}</label>
+            <label
+              :class="task.done?'custom-control-label' : 'custom-control-label'"
+              :for="task.id"
+            >{{task.title}}</label>
           </div>
           <div class="btn btn-white d-flex justify-content-end">
             <box-icon
@@ -98,21 +101,21 @@
         </div>
       </div>
     </div>
-    <!-- <transition name="slide-fade">
+    <transition name="slide-fade">
       <div v-if="showChart" class="chart d-flex justify-content-center">
         <chart></chart>
       </div>
-    </transition>-->
+    </transition>
   </div>
 </template>
 
 <script>
 import "boxicons";
-// import chart from "./Chart";
+import chart from "./Chart";
 import { mapState, mapActions } from "vuex";
 export default {
   name: "TodoList",
-  // components: { chart },
+  components: { chart },
   data() {
     return {
       newItem: null,
@@ -131,6 +134,9 @@ export default {
     this.taskListAction();
   },
   methods: {
+    teste(task) {
+      console.log(task);
+    },
     showItensCategory(task) {
       this.changeCategoryAction(task);
     },
@@ -145,9 +151,6 @@ export default {
     newTask() {
       if (this.selectedCategory == undefined)
         return alert(`Por favor adicione uma categoria`);
-      this.selectedCategory.tasks.push({
-        title: this.newItem
-      });
       this.newTaskAction({
         title: this.newItem,
         category_id: this.selectedCategory.id
@@ -212,6 +215,10 @@ export default {
 
 .activecategory {
   font-weight: bold;
+}
+
+.task-done {
+  text-decoration: line-through;
 }
 
 .main-task {

@@ -8,7 +8,7 @@ export default {
     },
     async newTaskAction({ commit }, payload) {
         let data = await api.newTask(payload)
-        commit('newTask', data)
+        commit('newTask', data.data)
     },
     async removeTaskAction({ commit }, id) {
         await api.removeTask(id)
