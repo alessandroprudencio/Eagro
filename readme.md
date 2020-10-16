@@ -1,5 +1,5 @@
 # Eagro Todo List
-Aplicação para gerenciar tarefas com api com backend em Ruby on Rails e frontend com VueJS
+Aplicação para gerenciar tarefas  com backend em Ruby on Rails e frontend com VueJS
  
  <!-- <img width="790"  src="https://github.com/alessandroprudencio/My-Lung/blob/master/preview_system.gif" /> -->
 
